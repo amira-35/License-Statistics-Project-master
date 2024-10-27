@@ -7,7 +7,6 @@ class HomeDesktop extends StatelessWidget {
   HomeDesktop({Key? key}) : super(key: key);
 
   var usercontroller = TextEditingController();
-
   var passwordcontroller = TextEditingController();
 
   @override
@@ -47,9 +46,7 @@ class HomeDesktop extends StatelessWidget {
                               controller: usercontroller,
                               keyboardType: TextInputType.name,
                               decoration: InputDecoration(
-                                labelText:
-                                    'Username', // quand je commance a ecrire ce message va desparaitre
-                                //par contre si on utilise LabelText : '..' , ne va pas
+                                labelText: 'Username',
                                 border: OutlineInputBorder(),
                                 prefixIcon: Icon(
                                   Icons.person_pin_circle_sharp,
@@ -58,15 +55,11 @@ class HomeDesktop extends StatelessWidget {
                             ),
                             SizedBox(height: 15.0),
                             TextField(
-                              controller:
-                                  passwordcontroller, // la var qu'on va ecrire dans le champ password va etre sauvergarder dans passwordcontroller !
+                              controller: passwordcontroller,
                               keyboardType: TextInputType.visiblePassword,
-                              obscureText:
-                                  true, //...... dans le champ de password
+                              obscureText: true,
                               decoration: InputDecoration(
-                                labelText:
-                                    'Password', // quand je commance a ecrire ce message va desparaitre
-                                //par contre si on utilise LabelText : '..' , ne va pas
+                                labelText: 'Password',
                                 border: OutlineInputBorder(),
                                 prefixIcon: Icon(
                                   Icons.lock,
@@ -79,24 +72,30 @@ class HomeDesktop extends StatelessWidget {
                             SizedBox(height: 50.0),
                             Container(
                               alignment: Alignment.center,
-                              child: RaisedButton(
+                              child: ElevatedButton(
                                 onPressed: () {
-                                  //print(usercontroller
-                                  //  .text); // affichage de text qui sont dans les deux field !
-                                  //print(passwordcontroller.text);
+                                  // Handle the button press
                                 },
-                                shape: RoundedRectangleBorder(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(221, 233, 128, 8),
+                                  shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(25),
-                                        bottomRight: Radius.circular(25),
-                                        topLeft: Radius.circular(25))),
-                                color: const Color.fromARGB(221, 233, 128, 8),
-                                child: const Text("Confirm",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                    )),
+                                      bottomLeft: Radius.circular(25),
+                                      bottomRight: Radius.circular(25),
+                                      topLeft: Radius.circular(25),
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 15, horizontal: 30),
+                                ),
+                                child: const Text(
+                                  "Confirm",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
                             ),
                           ],
@@ -116,7 +115,7 @@ class HomeDesktop extends StatelessWidget {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -142,46 +141,8 @@ class HomeDesktop extends StatelessWidget {
             hintText: hinText,
             prefixIcon: Icon(Icons.person),
           ),
-        )
+        ),
       ],
     );
   }
 }
-
-   //SizedBox(height: 50.0),
-                            /*TextField(
-                              decoration: InputDecoration(
-                                hintText: "Username",
-                              ),
-                            ),
-                            
- 
-                          TextField(
-                            decoration: InputDecoration(
-                              hintText: "Username",
-                            ),
-                          ),                           
-                            
-                            
-                            */
-                            /** Container(
-                              child: RaisedButton(
-                                onPressed: () {
-                                  //print(usercontroller
-                                  //  .text); // affichage de text qui sont dans les deux field !
-                                  //print(passwordcontroller.text);
-                                },
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(25),
-                                        bottomRight: Radius.circular(25),
-                                        topLeft: Radius.circular(25))),
-                                color: const Color.fromARGB(221, 233, 128, 8),
-                                child: const Text("Confirm",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                    )),
-                              ),
-                            ), */
