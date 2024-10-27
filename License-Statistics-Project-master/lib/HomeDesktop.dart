@@ -34,18 +34,18 @@ class HomeDesktop extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
+                            const Text(
                               "Login",
                               style: TextStyle(
                                 fontSize: 60.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(height: 50.0),
+                            const SizedBox(height: 50.0),
                             TextField(
                               controller: usercontroller,
                               keyboardType: TextInputType.name,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 labelText: 'Username',
                                 border: OutlineInputBorder(),
                                 prefixIcon: Icon(
@@ -53,12 +53,12 @@ class HomeDesktop extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 15.0),
+                            const SizedBox(height: 15.0),
                             TextField(
                               controller: passwordcontroller,
                               keyboardType: TextInputType.visiblePassword,
                               obscureText: true,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 labelText: 'Password',
                                 border: OutlineInputBorder(),
                                 prefixIcon: Icon(
@@ -69,7 +69,7 @@ class HomeDesktop extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 50.0),
+                            const SizedBox(height: 50.0),
                             Container(
                               alignment: Alignment.center,
                               child: ElevatedButton(
@@ -78,14 +78,14 @@ class HomeDesktop extends StatelessWidget {
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color.fromARGB(221, 233, 128, 8),
-                                  shape: RoundedRectangleBorder(
+                                  shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(25),
                                       bottomRight: Radius.circular(25),
                                       topLeft: Radius.circular(25),
                                     ),
                                   ),
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       vertical: 15, horizontal: 30),
                                 ),
                                 child: const Text(
@@ -133,13 +133,13 @@ class HomeDesktop extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(fontSize: 15, color: Colors.black),
+          style: const TextStyle(fontSize: 15, color: Colors.black),
         ),
         TextFormField(
           obscureText: isPassword,
           decoration: InputDecoration(
             hintText: hinText,
-            prefixIcon: Icon(Icons.person),
+            prefixIcon: const Icon(Icons.person),
           ),
         ),
       ],
